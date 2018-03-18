@@ -1,0 +1,43 @@
+syntax = "proto3";
+package dotbpe;
+
+option csharp_namespace = "Hangfire.Consumer";
+option optimize_for = SPEED;
+
+
+
+import public "dotbpe_option.proto";
+
+option (generic_objectfactory) = true;
+option (generic_http_api_routes) = true; //生成路由配置信息
+
+service TaskConsumerService{
+
+    option (service_id)= 2000 ;//设定服务ID
+
+    //任务执行，由调度服务 调用
+    rpc Excute (CommonReq) returns (VoidRes){
+        option (message_id)= 1 ;//设定消息ID
+
+        option (http_api_option) = {
+            path : "/api/task/excute",
+            method : "post",
+            description : "队列任务"
+        };
+    };
+}
+
+message CommonReq{
+    string job_id = 1 ; //任务ID
+
+    int32 service_id = 10; // 服务ID
+    int32 message_id = 11; // 消息ID
+    string data = 12;   //数据JSON 应该尽量少的传递数据，必要时可以传递ID，在实际执行是去获取数据
+}
+
+
+message VoidRes{
+    string return_message = 1 ;
+}
+
+

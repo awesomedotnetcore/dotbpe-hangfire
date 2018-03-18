@@ -1,0 +1,11 @@
+{
+    "hostAddress": "0.0.0.0:5111",   
+    "Logging": {
+        "IncludeScopes": false,
+        "LogLevel": {
+            "Default": "Information",
+            "System": "Warning",
+            "Microsoft": "Warning"
+        }
+    }
+}

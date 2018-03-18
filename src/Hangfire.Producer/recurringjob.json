@@ -1,0 +1,10 @@
+﻿[
+  {
+    "job-name": "Long Running Job",
+    "job-type": "Hangfire.Jobs.Impl.LongRunningJob, Hangfire.Jobs",
+    "cron-expression": "*/2 * * * *",
+    "job-data": {
+      "RunningTimes": 300
+    }
+  }
+]

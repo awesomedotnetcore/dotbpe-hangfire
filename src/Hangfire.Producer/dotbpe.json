@@ -1,0 +1,15 @@
+{
+    "hostAddress": "0.0.0.0:5101",
+    
+    "Hangfire": {
+        "Redis": "127.0.0.1:6379"
+    },
+    "Logging": {
+        "IncludeScopes": false,
+        "LogLevel": {
+            "Default": "Information",
+            "System": "Warning",
+            "Microsoft": "Warning"
+        }
+    }
+}
