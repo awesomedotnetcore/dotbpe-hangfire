@@ -22,10 +22,10 @@
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="DotBPE.Plugin.AspNetGateway" Version="1.1.20" />
-    <PackageReference Include="DotBPE.Protobuf" Version="1.1.24" />
-    <PackageReference Include="DotBPE.Protocol.Amp" Version="1.1.24" />
-    <PackageReference Include="DotBPE.Rpc.Hosting" Version="1.1.24" />
+    <PackageReference Include="DotBPE.Plugin.AspNetGateway" Version="1.1.21" />
+    <PackageReference Include="DotBPE.Protobuf" Version="1.1.26" />
+    <PackageReference Include="DotBPE.Protocol.Amp" Version="1.1.26" />
+    <PackageReference Include="DotBPE.Rpc.Hosting" Version="1.1.26" />
     <PackageReference Include="Microsoft.AspNetCore" Version="2.0.2" />
   </ItemGroup>
 
