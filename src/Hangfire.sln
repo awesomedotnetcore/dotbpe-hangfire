@@ -3,22 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.26124.0
 MinimumVisualStudioVersion = 15.0.26124.0
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Hangfire.Producer", "Hangfire.Producer\Hangfire.Producer.csproj", "{1F68544C-B7FE-46B4-B396-00FA247B55FC}"
-EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Hangfire.Dashborad", "Hangfire.Dashborad\Hangfire.Dashborad.csproj", "{0F8130E2-C6C3-4F54-8EFB-B59D6A223D37}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Hangfire.ServerNode", "Hangfire.ServerNode\Hangfire.ServerNode.csproj", "{7093ADC5-ECAE-4E44-AD08-0CAF9D62B53B}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Hangfire.Jobs", "Hangfire.Jobs\Hangfire.Jobs.csproj", "{35810845-3491-4729-A875-B36B3CE14C42}"
-EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Hangfire.Consumer", "Hangfire.Consumer\Hangfire.Consumer.csproj", "{9BF22137-2020-42BD-90A0-A9599CAD4C87}"
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "protos", "protos", "{B2BEB317-E565-4A2F-9413-0008AAC3390C}"
-	ProjectSection(SolutionItems) = preProject
-		protos\dotbpe_option.proto = protos\dotbpe_option.proto
-		protos\taskconsumer_2000.proto = protos\taskconsumer_2000.proto
-		protos\taskproducer_1000.proto = protos\taskproducer_1000.proto
-	EndProjectSection
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DotBPE.Hangfire", "DotBPE.Hangfire\DotBPE.Hangfire.csproj", "{1E323A70-7D5E-4E81-95E8-163AB3AE88FA}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -26,10 +15,6 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{1F68544C-B7FE-46B4-B396-00FA247B55FC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{1F68544C-B7FE-46B4-B396-00FA247B55FC}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{1F68544C-B7FE-46B4-B396-00FA247B55FC}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{1F68544C-B7FE-46B4-B396-00FA247B55FC}.Release|Any CPU.Build.0 = Release|Any CPU
 		{0F8130E2-C6C3-4F54-8EFB-B59D6A223D37}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{0F8130E2-C6C3-4F54-8EFB-B59D6A223D37}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0F8130E2-C6C3-4F54-8EFB-B59D6A223D37}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -38,14 +23,10 @@ Global
 		{7093ADC5-ECAE-4E44-AD08-0CAF9D62B53B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7093ADC5-ECAE-4E44-AD08-0CAF9D62B53B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7093ADC5-ECAE-4E44-AD08-0CAF9D62B53B}.Release|Any CPU.Build.0 = Release|Any CPU
-		{35810845-3491-4729-A875-B36B3CE14C42}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{35810845-3491-4729-A875-B36B3CE14C42}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{35810845-3491-4729-A875-B36B3CE14C42}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{35810845-3491-4729-A875-B36B3CE14C42}.Release|Any CPU.Build.0 = Release|Any CPU
-		{9BF22137-2020-42BD-90A0-A9599CAD4C87}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{9BF22137-2020-42BD-90A0-A9599CAD4C87}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{9BF22137-2020-42BD-90A0-A9599CAD4C87}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{9BF22137-2020-42BD-90A0-A9599CAD4C87}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1E323A70-7D5E-4E81-95E8-163AB3AE88FA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1E323A70-7D5E-4E81-95E8-163AB3AE88FA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1E323A70-7D5E-4E81-95E8-163AB3AE88FA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1E323A70-7D5E-4E81-95E8-163AB3AE88FA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -1,0 +1,92 @@
+syntax = "proto3";
+package dotbpe;
+
+option csharp_namespace = "DotBPE.Hangfire";
+option optimize_for = SPEED;
+
+
+
+import public "dotbpe_option.proto";
+import public "taskmessage.proto";
+
+option (generic_objectfactory) = true; //生成对象工程
+option (generic_http_api_routes) = true; //生成路由配置信息
+option (generic_markdown_doc) = true; //生成Markdown文档
+
+
+// 任务产生服务
+service TaskProducerService{
+
+    option (service_id)= 2001 ;//设定服务ID
+
+
+    // 队列任务
+    rpc Enqueue (EnqueueTaskReq) returns (TaskVoidRes){
+        option (message_id)= 101 ;//设定消息ID
+
+        option (http_api_option) = {
+            path : "/api/hangfire/enqueue",
+            method : "post",
+            description : "队列任务"
+        };
+
+    };
+
+    // 延迟任务，延迟单位分钟
+    rpc Schedule (ScheduleTaskReq) returns (TaskVoidRes){
+        option (message_id)= 102 ; //设定消息ID
+
+        option (http_api_option) = {
+            path : "/api/hangfire/schedule",
+            method : "post",
+            description : "延迟任务，延迟单位分钟"
+        };
+    };
+
+    // 延迟任务，延迟单位为秒，其实是不准的
+    rpc ScheduleSecond (ScheduleTaskReq) returns (TaskVoidRes){
+        option (message_id)= 103 ; //设定消息ID
+
+        option (http_api_option) = {
+            path : "/api/hangfire/schedulesecond",
+            method : "post",
+            description : "延迟任务，延迟单位分钟"
+        };
+    };
+
+
+    // 队列任务 转发服务请求异步调用
+    rpc EnqueueTransfor (EnqueueTaskReq) returns (TaskVoidRes){
+        option (message_id)= 104 ;//设定消息ID
+
+        option (http_api_option) = {
+            path : "/api/hangfire/enqueuetransfor",
+            method : "post",
+            description : "队列任务 转发服务请求异步调用"
+        };
+
+    };
+
+    // 延迟任务，延迟单位分钟  转发服务请求异步调用
+    rpc ScheduleTransfor (ScheduleTaskReq) returns (TaskVoidRes){
+        option (message_id)= 105 ; //设定消息ID
+
+        option (http_api_option) = {
+            path : "/api/hangfire/scheduletransfor",
+            method : "post",
+            description : "延迟任务，延迟单位分钟  转发服务请求异步调用"
+        };
+    };
+
+    // 延迟任务，延迟单位为秒， 转发服务请求异步调用
+    rpc ScheduleSecondTransfor (ScheduleTaskReq) returns (TaskVoidRes){
+        option (message_id)= 106 ; //设定消息ID
+
+        option (http_api_option) = {
+            path : "/api/hangfire/schedulesecondtransfor",
+            method : "post",
+            description : "延迟任务，延迟单位为秒， 转发服务请求异步调用"
+        };
+    };
+
+}

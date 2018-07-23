@@ -1,0 +1,50 @@
+// [START declaration]
+syntax = "proto3";
+package dotbpe;
+// [END declaration]
+
+// [START csharp_declaration]
+option csharp_namespace = "DotBPE.Hangfire";
+// [END csharp_declaration]
+
+import public "dotbpe_option.proto";
+
+
+
+option (common_fields) = "client_ip,x_request_id,return_message" ; //设置公共字段
+
+
+//公共任务的请求消息
+message CommonTaskReq{
+    string job_id = 1 ; //任务ID
+
+    int32 service_id = 10; // 服务ID
+    int32 message_id = 11; // 消息ID
+    string data = 12;   //数据JSON 应该尽量少的传递数据，必要时可以传递ID，在实际执行是去获取数据
+}
+
+//队列任务的请求消息
+message EnqueueTaskReq{
+    string client_ip = 1; //用户端IP
+    string x_request_id = 3 ; //请求的唯一标识，用于服务间传递
+
+    int32 service_id = 10; // 服务ID
+    int32 message_id = 11; // 消息ID
+    string data = 12;   //数据JSON 应该尽量少的传递数据，必要时可以传递ID，在实际执行是去获取数据
+}
+
+//延迟任务的请求消息
+message ScheduleTaskReq{
+    string client_ip = 1; //用户端IP
+    string x_request_id = 3 ; //请求的唯一标识，用于服务间传递
+
+    int32 service_id = 10; // 服务ID
+    int32 message_id = 11; // 消息ID
+    int32 delay = 12; //延迟的单位
+    string data = 13;   //数据JSON 应该尽量少的传递数据，必要时可以传递ID，在实际执行是去获取数据
+}
+
+//任务的空返回消息
+message TaskVoidRes{
+    string return_message = 1; //返回消息
+}

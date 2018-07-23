@@ -1,0 +1,32 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+	<Description>DotBPE.Hangfire是基于Hangfire的后台任务执行帮助类库，通过结合DotBPE可以很方便的再DotBPE项目中集成Hangfire平台</Description>
+    <Copyright>Xuanye @ 2018</Copyright>
+    <Authors>Xuanye</Authors>
+    <AssemblyTitle>DotBPE Hangfire</AssemblyTitle>
+    <AssemblyName>DotBPE.Hangfire</AssemblyName>
+    <PackageId>DotBPE.Hangfire</PackageId>
+    <Version>$(VersionSuffix)</Version>
+    <PackageTags>rpc,dotnetty</PackageTags>
+    <PackageReleaseNotes>DotBPE Hangfire</PackageReleaseNotes>
+    <PackageProjectUrl>https://github.com/dotbpe/dotbpe-hangfire</PackageProjectUrl>
+    <PackageLicenseUrl>https://github.com/dotbpe/dotbpe/blob/master/LICENSE</PackageLicenseUrl>
+    <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
+    <RepositoryType>git</RepositoryType>
+    <RepositoryUrl>https://github.com/dotbpe/dotbpe-hangfire</RepositoryUrl>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Folder Include="_g\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="DotBPE.Protobuf" Version="1.2.2" />
+    <PackageReference Include="DotBPE.Protocol.Amp" Version="1.2.2" />
+    <PackageReference Include="Hangfire.Console" Version="1.4.0" />
+    <PackageReference Include="Hangfire.Core" Version="1.6.19" />
+  </ItemGroup>
+
+</Project>

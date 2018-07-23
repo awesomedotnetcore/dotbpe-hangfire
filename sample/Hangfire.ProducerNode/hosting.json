@@ -1,0 +1,4 @@
+{
+    "hostAddress": "0.0.0.0:5002",
+    "server.urls": "http://0.0.0.0:5000"
+}

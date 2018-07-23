@@ -1,0 +1,35 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>netcoreapp2.1</TargetFramework>
+	<ThreadPoolMinThreads>25</ThreadPoolMinThreads>
+	<ThreadPoolMaxThreads>50</ThreadPoolMaxThreads>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="Foundatio" Version="7.0.1706" />
+    <PackageReference Include="Foundatio.Redis" Version="7.0.1564" />
+    <PackageReference Include="Hangfire.Console" Version="1.4.0" />
+    <PackageReference Include="HangFire.Core" Version="1.6.19" />
+    <PackageReference Include="Hangfire.Redis.StackExchange.StrongName" Version="1.7.0" />
+    <PackageReference Include="Microsoft.Extensions.Configuration.CommandLine" Version="2.1.1" />
+    <PackageReference Include="Microsoft.Extensions.Configuration.EnvironmentVariables" Version="2.1.1" />
+    <PackageReference Include="Microsoft.Extensions.Configuration.Json" Version="2.1.1" />
+    <PackageReference Include="Microsoft.Extensions.Hosting" Version="2.1.1" />
+    <PackageReference Include="Microsoft.Extensions.Logging" Version="2.1.1" />
+    <PackageReference Include="Microsoft.Extensions.Logging.Configuration" Version="2.1.1" />
+    <PackageReference Include="Microsoft.Extensions.Logging.Console" Version="2.1.1" />
+    <PackageReference Include="StackExchange.Redis.StrongName" Version="1.2.6" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\src\DotBPE.Hangfire\DotBPE.Hangfire.csproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Update="dotbpe.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="hosting.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+</Project>

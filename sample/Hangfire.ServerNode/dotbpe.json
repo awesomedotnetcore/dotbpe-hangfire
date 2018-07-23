@@ -1,0 +1,19 @@
+{
+    "Hangfire": {
+        "Redis": "127.0.0.1:6379",
+        "Prefix": "HFTest:"
+    },
+    "remoteServices": [
+        {
+            "serviceId": 2000,
+            "messageId": "0",
+            "remoteAddress": "127.0.0.1:5003"
+        }
+    ],
+    "Logging": {
+        "LogLevel": {
+            "Default": "Information",
+            "Microsoft": "Warning"
+        }
+    }
+}

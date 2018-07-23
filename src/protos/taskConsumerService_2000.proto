@@ -1,0 +1,35 @@
+syntax = "proto3";
+package dotbpe;
+
+option csharp_namespace = "DotBPE.Hangfire";
+option optimize_for = SPEED;
+
+
+
+import public "dotbpe_option.proto";
+import public "taskmessage.proto";
+
+option (generic_objectfactory) = true; //生成对象工程
+option (generic_http_api_routes) = true; //生成路由配置信息
+option (generic_markdown_doc) = true; //生成Markdown文档
+
+
+// 任务消费服务
+service TaskConsumerService{
+
+    option (service_id)= 2000 ;//设定服务ID
+
+    // 任务执行，由调度服务 调用
+    rpc Excute (CommonTaskReq) returns (TaskVoidRes){
+        option (message_id)= 100 ;//设定消息ID
+
+        option (http_api_option) = {
+            path : "/api/hangfire/excute",
+            method : "post",
+            description : "执行任务，由调度程序调度"
+        };
+    };
+
+}
+
+
